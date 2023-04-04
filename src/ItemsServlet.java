@@ -1,8 +1,8 @@
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -24,7 +24,7 @@ public class ItemsServlet extends HttpServlet {
         if (previousItems == null) {
 
             // Add the newly created ArrayList to session, so that it could be retrieved next time
-            previousItems = new ArrayList<>();
+            previousItems = new ArrayList<String>();
             session.setAttribute("previousItems", previousItems);
         }
 
